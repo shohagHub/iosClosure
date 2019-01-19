@@ -13,6 +13,16 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        iamGlobalFunction()
+        iamNestedWithinGlobal()
+        
+        
+        print("======Closures=====")
+        let cl = Closures.init()
+        cl.runClosure()
+        cl.takesClosure(function: {(a: Int, b: Int) -> Int in
+            return a + b
+        }, anotherParam: 12)
     }
 
 
